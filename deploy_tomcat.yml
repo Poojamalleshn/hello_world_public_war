@@ -32,8 +32,8 @@
 
   - name: backup file with owner and permissions
     copy:
-      src: /opt/tomcat/webapps/webapp.war
-      dest: /home/ubuntu/backup/webapp.war
+      src: /opt/tomcat/webapps/webappnew.war
+      dest: /home/ubuntu/backup/webappnew.war
       remote_src: yes
    ## when: war_stat.stat.exists   # ✅ only run if the file exists
 
