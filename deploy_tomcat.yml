@@ -14,10 +14,10 @@
 
   - name: download war file
     ansible.builtin.get_url:
-      url: https://hiqodenew.jfrog.io/artifactory/hiqode-tomcat-app-ma-generic-local/webapp-{{ build_number }}.war
+      url: https://trial2q496n.jfrog.io/artifactory/tomcat_app-generic-local/webapp-{{ build_number }}.war
       dest: /home/ubuntu/sourcefile/webapp.war
-      username: siddeshg672@gmail.com
-      password: Siddesh@123456
+      username: poojamn110729@gmail.com
+      password: Admin@123456
 
   - name: create directory for backup
     file: 
