@@ -3,7 +3,7 @@
   become: yes
   vars:
     build_number: '{{ BUILD_NUMBER }}'
-  #become_user: tomcat
+
   tasks:
 
   - name: create directory 
@@ -25,11 +25,17 @@
       state: directory
       mode: 0777
 
+  - name: check if old war exists
+    stat:
+      path: /opt/tomcat/webapps/webapp.war
+    register: war_stat
+
   - name: backup file with owner and permissions
     copy:
       src: /opt/tomcat/webapps/webapp.war
       dest: /home/ubuntu/backup/webapp.war
       remote_src: yes
+    when: war_stat.stat.exists   # ✅ only run if the file exists
 
   - name: Delete remote war file
     file:
