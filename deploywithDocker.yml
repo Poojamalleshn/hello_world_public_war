@@ -6,15 +6,15 @@
   tasks:
       
     - name: login to jfrog
-      shell: docker login -u siddeshg672@gmail.com -p Siddesh@123456 hiqodenew.jfrog.io  
+      shell: docker login -u poojamn110729@gmail.com -p Admin@123456 trial2q496n.jfrog.io  
     
     - name: pull an image
-      shell: docker pull hiqodenew.jfrog.io/sample-war-app/sample_docker_image_with_war_deploy:v1.0-{{ build_number }}
+      shell: docker pull trial2q496n.jfrog.io/docker-repo/sample_docker_image_with_war_deploy:v1.0-{{ build_number }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -id --name devopsAppDeploy -p 8111:8080 hiqodenew.jfrog.io/sample-war-app/sample_docker_image_with_war_deploy:v1.0-{{ build_number }}
+      shell: docker run -id --name devopsAppDeploy -p 8111:8080 trial2q496n.jfrog.io/docker-repo/sample_docker_image_with_war_deploy:v1.0-{{ build_number }}
  
    
