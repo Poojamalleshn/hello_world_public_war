@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: hiqodenew.jfrog.io/sample-war-app/sample_docker_image_with_war_deploy:v1.0-13
+        image: trial2q496n.jfrog.io/docker-repo/sample_docker_image_with_war_deploy:v1.0-13
         ports:
         - containerPort: 8080
